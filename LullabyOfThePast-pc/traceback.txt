@@ -1,0 +1,54 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 1402, in script call
+    call play_rhythm_game
+  File "game/script.rpy", line 450, in script
+    $ reset_rhythm()
+  File "game/script.rpy", line 450, in <module>
+    $ reset_rhythm()
+      ~~~~~~~~~~~~^^
+  File "game/script.rpy", line 106, in reset_rhythm
+    load_notes()
+    ~~~~~~~~~~^^
+  File "game/script.rpy", line 57, in load_notes
+    f = renpy.file("audio/beatmap.txt")
+        ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Couldn't find file 'audio/beatmap.txt'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "game/script.rpy", line 1402, in script call
+    call play_rhythm_game
+  File "game/script.rpy", line 450, in script
+    $ reset_rhythm()
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 450, in <module>
+    $ reset_rhythm()
+      ~~~~~~~~~~~~^^
+  File "game/script.rpy", line 106, in reset_rhythm
+    load_notes()
+    ~~~~~~~~~~^^
+  File "game/script.rpy", line 57, in load_notes
+    f = renpy.file("audio/beatmap.txt")
+        ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/loaderexports.py", line 120, in file
+    return open_file(fn, encoding=encoding)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/loaderexports.py", line 99, in open_file
+    rv = renpy.loader.load(fn, directory=directory)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/loader.py", line 712, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'audio/beatmap.txt'.
+
+Windows-11-10.0.26200-SP0 AMD64
+Ren'Py 8.5.3.26051504
+Lullaby Of The Past 
+Wed May 27 12:48:34 2026

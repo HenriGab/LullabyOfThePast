@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 336: 'call' is not a keyword argument or valid child of the text statement.
+    call fim
+        ^
+
+Ren'Py Version: Ren'Py 8.5.3.26051504
+Wed May 27 13:26:16 2026
